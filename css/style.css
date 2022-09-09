@@ -1,3 +1,9 @@
+/*
+  Mitch x Luca Benedetti
+  - https://github.com/lbwd
+  - http://instagram.com/lucaunliked
+*/
+
 html {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
@@ -5,10 +11,6 @@ html {
 
 body {
     margin: 3em;
-}
-
-header {
-    margin-bottom: 4em;
 }
 
 h1 {
@@ -19,7 +21,7 @@ h1 {
 }
 
 small {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 200;
 }
 
@@ -35,3 +37,35 @@ article {
     line-height: 1.25em;
     margin-bottom: 0.5em;
 }
+
+section {
+    margin-top: 4em;
+}
+
+.images-slider {
+    margin-top: 8em;
+    height: 450px;
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+}
+
+.images-slider > img {
+    margin-right: 0.375em;
+}
+
+.images-slider.animation > img {
+    animation: phrase 5s linear infinite;
+}
+
+@keyframes phrase {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
