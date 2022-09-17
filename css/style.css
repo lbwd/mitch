@@ -1,7 +1,6 @@
 /*
   Mitch x Luca Benedetti
-  - https://github.com/lbwd
-  - http://instagram.com/lucaunliked
+  https://linktr.ee/lucaunliked
 */
 
 html {
@@ -44,22 +43,47 @@ section {
 }
 
 .images-slider {
-    margin-top: 8em;
+    width: calc(100% + 6em);
+    max-width: calc(100% + 6em);
     height: 450px;
-    max-width: 100%;
+    margin: 8em 0 2em -3em;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    left: 0;
 }
 
-.images-slider > img {
+.images-slider-int {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+}
+
+.images-slider-int > img {
     margin-right: 0.375em;
 }
 
-.images-slider.animation > img {
-    animation: phrase 5s linear infinite;
+.slider-arrows {
+    position: absolute;
+    width: 100%;
+    margin-top: -23.5em;
+    margin-left: -3em;
+}
+
+.image-slider-arrow {
+    position: absolute;
+    top: 2.5em;
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffc000;
+    cursor: pointer;
+    user-select: none;
+}
+
+.image-slider-arrow.left {
+    left: 0.5em;
+}
+
+.image-slider-arrow.right {
+    right: 0.5em;
 }
 
 @keyframes phrase {
