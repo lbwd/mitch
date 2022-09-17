@@ -4,93 +4,117 @@
 */
 
 html {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 body {
-    margin: 3em;
+  margin: 3em;
 }
 
 h1 {
-    font-size: 8em;
-    font-weight: bold;
-    line-height: 1em;
-    margin: 0;
+  font-size: 8em;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
 }
 
 small {
-    font-size: 1.125em;
-    font-weight: 200;
+  font-size: 1.125em;
+  font-weight: 200;
 }
 
 aside {
-    position: absolute;
-    top: 2.5em;
-    right: 2.5em;
+  position: absolute;
+  top: 2.5em;
+  right: 2.5em;
 }
 
 article {
-    font-size: 2.125em;
-    font-weight: bold;
-    line-height: 1.25em;
-    margin-bottom: 0.5em;
+  font-size: 2.125em;
+  font-weight: bold;
+  line-height: 1.25em;
+  margin-bottom: 0.5em;
 }
 
 section {
-    margin-top: 4em;
+  margin-top: 4em;
 }
 
 .images-slider {
-    width: calc(100% + 6em);
-    max-width: calc(100% + 6em);
-    height: 450px;
-    margin: 8em 0 2em -3em;
-    overflow-x: hidden;
+  width: calc(100% + 6em);
+  max-width: calc(100% + 6em);
+  height: 450px;
+  margin: 8em 0 0 -3em;
+  overflow-x: hidden;
 }
 
 .images-slider-int {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 450px;
 }
 
 .images-slider-int > img {
-    margin-right: 0.375em;
+  margin-right: 0.375em;
 }
 
 .slider-arrows {
-    position: absolute;
-    width: 100%;
-    margin-top: -23.5em;
-    margin-left: -3em;
+  position: absolute;
+  width: 100%;
+  margin-top: -23.5em;
+  margin-left: -3em;
 }
 
 .image-slider-arrow {
-    position: absolute;
-    top: 2.5em;
-    font-size: 3em;
-    font-weight: bold;
-    color: #ffc000;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 2.5em;
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffc000;
+  cursor: pointer;
+  user-select: none;
 }
 
 .image-slider-arrow.left {
-    left: 0.5em;
+  left: 0.5em;
 }
 
 .image-slider-arrow.right {
-    right: 0.5em;
+  right: 0.5em;
+}
+
+.phrase-slider {
+  width: calc(100% + 6em);
+  max-width: calc(100% + 6em);
+  margin-left: -3em;
+  margin-top: 6em;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.phrase-slider > span {
+  font-size: 5em;
+  font-weight: 900;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  animation: phrase 10s linear infinite;
+  white-space: nowrap;
+}
+
+.phrase-slider > span > span.black {
+  color: black;
+  text-shadow: none;
 }
 
 @keyframes phrase {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-100%, 0);
-    }
+  0% {
+    transform: translate(0, 0);
   }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
