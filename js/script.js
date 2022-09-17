@@ -2,8 +2,8 @@
   Offici x Luca Benedetti
   https://linktr.ee/lucaunliked
 */
-const interval = [];
 
+const interval = [];
 window.addEventListener('load', (loadEv) => {
   const imagesSlider = document.getElementsByClassName('images-slider')[0];
 

@@ -3,6 +3,7 @@
   https://linktr.ee/lucaunliked
 */
 
+/* Defaults */
 html {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 300;
@@ -10,13 +11,26 @@ html {
 }
 
 body {
-  margin: 3em;
+  margin: 4em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 h1 {
   font-size: 8em;
   font-weight: bold;
   line-height: 1em;
+  margin: 0;
+}
+
+h2 {
+  width: auto;
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1.3em;
   margin: 0;
 }
 
@@ -27,12 +41,12 @@ small {
 
 aside {
   position: absolute;
-  top: 2.5em;
-  right: 2.5em;
+  top: 4em;
+  right: 4em;
 }
 
 article {
-  font-size: 2.125em;
+  font-size: 2.65em;
   font-weight: bold;
   line-height: 1.25em;
   margin-bottom: 0.5em;
@@ -42,11 +56,21 @@ section {
   margin-top: 4em;
 }
 
+button {
+  background-color: #ffc000;
+  border: none;
+  color: white;
+  font-size: 1.75em;
+  padding: 0.75em 3em;
+  cursor: pointer;
+}
+
+/* classes */
 .images-slider {
-  width: calc(100% + 6em);
-  max-width: calc(100% + 6em);
+  width: calc(100% + 8em);
+  max-width: calc(100% + 8em);
   height: 450px;
-  margin: 8em 0 0 -3em;
+  margin: 8em 0 0 -4em;
   overflow-x: hidden;
 }
 
@@ -65,7 +89,7 @@ section {
   position: absolute;
   width: 100%;
   margin-top: -23.5em;
-  margin-left: -3em;
+  margin-left: -4em;
 }
 
 .image-slider-arrow {
@@ -87,9 +111,9 @@ section {
 }
 
 .phrase-slider {
-  width: calc(100% + 6em);
-  max-width: calc(100% + 6em);
-  margin-left: -3em;
+  width: calc(100% + 8em);
+  max-width: calc(100% + 8em);
+  margin-left: -4em;
   margin-top: 6em;
   overflow-x: hidden;
   display: flex;
@@ -110,6 +134,59 @@ section {
   text-shadow: none;
 }
 
+.central-button {
+  width: 100%;
+  display: flex;
+  place-content: center;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16em;
+}
+
+.links-left-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-left-section > h2 {
+  cursor: pointer;
+}
+
+.links-left-section > h2:hover {
+  color: #ffc000;
+}
+
+.links-right-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: flex-end;
+  align-items: flex-end;
+}
+
+.links-right-section > .square-logo {
+  width: 150px;
+  margin-bottom: 2em;
+}
+
+.links-right-section > small {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.links-right-section > small > a {
+  cursor: pointer;
+}
+
+.links-right-section > small > a:hover {
+  color: #ffc000;
+}
+
+/* Animations */
 @keyframes phrase {
   0% {
     transform: translate(0, 0);
