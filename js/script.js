@@ -5,6 +5,7 @@
 
 const interval = [];
 window.addEventListener('load', (loadEv) => {
+  /* Image slider */
   const imagesSlider = document.getElementsByClassName('images-slider')[0];
 
   document.getElementById('arrow-left').addEventListener('mousedown', (e) => {
@@ -22,6 +23,18 @@ window.addEventListener('load', (loadEv) => {
       }, 10)
     );
   });
+
+  /* Thanks divs */
+  document
+    .getElementsByClassName('arrow-logo')[0]
+    .addEventListener('mousedown', (e) => {
+      const thanksText = document.getElementsByClassName('thanks-text')[0];
+      if (thanksText.style.opacity == 0) {
+        thanksText.style.opacity = 1;
+      } else {
+        thanksText.style.opacity = 0;
+      }
+    });
 });
 
 window.addEventListener('mouseup', function (event) {

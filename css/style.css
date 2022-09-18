@@ -241,12 +241,15 @@ footer > h6 > a:hover {
 
 .pre-footer > .thanks > .arrow-logo {
   width: 60px;
+  cursor: pointer;
 }
 
 .thanks-text {
   display: flex;
   flex-direction: column;
   margin-left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.15s linear;
 }
 
 .thanks-text > h6 {
