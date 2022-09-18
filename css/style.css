@@ -52,8 +52,16 @@ aside {
   right: 4em;
 }
 
+aside > h6 > a {
+  transition: color 0.15s linear;
+}
+
+aside > h6 > a:hover {
+  color: #ffc000;
+}
+
 article {
-  font-size: 2.65em;
+  font-size: 2.35em;
   font-weight: bold;
   line-height: 1.25em;
   margin-bottom: 0.5em;
@@ -70,6 +78,7 @@ button {
   font-size: 1.5em;
   padding: 1em 4em;
   cursor: pointer;
+  transition: background-color 0.15s linear;
 }
 
 button:hover {
@@ -86,6 +95,14 @@ footer {
 
 footer > h6 {
   color: white;
+}
+
+footer > h6 > a {
+  transition: color 0.15s linear;
+}
+
+footer > h6 > a:hover {
+  color: black;
 }
 
 /* classes */
@@ -176,6 +193,7 @@ footer > h6 {
 
 .links-left-section > h2 {
   cursor: pointer;
+  transition: color 0.15s linear;
 }
 
 .links-left-section > h2:hover {
@@ -204,6 +222,7 @@ footer > h6 {
 
 .links-right-section > h6 > a {
   cursor: pointer;
+  transition: color 0.15s linear;
 }
 
 .links-right-section > h6 > a:hover {
