@@ -242,6 +242,13 @@ footer > h6 > a:hover {
 .pre-footer > .thanks > .arrow-logo {
   width: 60px;
   cursor: pointer;
+  transition: filter 0.15s linear;
+  animation: arrow-pump 2s linear infinite;
+}
+
+.pre-footer > .thanks > .arrow-logo:hover {
+  filter: invert(73%) sepia(97%) saturate(2104%) hue-rotate(0deg)
+    brightness(107%) contrast(103%);
 }
 
 .thanks-text {
@@ -268,5 +275,20 @@ footer > h6 > a:hover {
   }
   100% {
     transform: translate(-100%, 0);
+  }
+}
+
+@keyframes arrow-pump {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10%, 10%);
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }

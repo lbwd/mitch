@@ -12,7 +12,7 @@ window.addEventListener('load', (loadEv) => {
     interval.push(
       setInterval(function () {
         imagesSlider.scrollLeft -= 3;
-      }, 10)
+      }, 5)
     );
   });
 
@@ -20,20 +20,23 @@ window.addEventListener('load', (loadEv) => {
     interval.push(
       setInterval(function () {
         imagesSlider.scrollLeft += 3;
-      }, 10)
+      }, 5)
     );
   });
 
   /* Thanks divs */
   document
     .getElementsByClassName('arrow-logo')[0]
-    .addEventListener('mousedown', (e) => {
+    .addEventListener('mouseover', (e) => {
       const thanksText = document.getElementsByClassName('thanks-text')[0];
-      if (thanksText.style.opacity == 0) {
-        thanksText.style.opacity = 1;
-      } else {
-        thanksText.style.opacity = 0;
-      }
+      thanksText.style.opacity = 1;
+    });
+
+  document
+    .getElementsByClassName('arrow-logo')[0]
+    .addEventListener('mouseout', (e) => {
+      const thanksText = document.getElementsByClassName('thanks-text')[0];
+      thanksText.style.opacity = 0;
     });
 });
 
