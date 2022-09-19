@@ -66,6 +66,7 @@ article {
   font-weight: bold;
   line-height: 1.15em;
   margin-bottom: 0.5em;
+  visibility: hidden;
 }
 
 section {
