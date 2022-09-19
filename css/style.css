@@ -351,6 +351,10 @@ h1 > span.color-red {
     margin-top: 0;
   }
 
+  .pre-footer > .thanks {
+    place-content: center;
+  }
+
   .arrow-logo {
     display: none;
   }
@@ -358,19 +362,28 @@ h1 > span.color-red {
   .thanks-text {
     opacity: 1;
     align-items: center;
-  }
-
-  .thanks-text {
     text-align: center;
     font-size: 0.5em;
   }
 
+  .thanks-text > h6 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thanks-text > h6 > .space-to-remove {
+    display: none;
+  }
+
   footer {
     text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 
   footer > h6 {
     font-weight: 400;
+    font-size: 1em;
   }
 }
 
