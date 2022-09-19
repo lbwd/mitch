@@ -41,6 +41,29 @@ window.addEventListener('load', (loadEv) => {
 
   /* Text effect */
   const mainText = document.getElementById('main-text');
+  const textSplitted = mainText.textContent.split(' ');
+  const newText = [];
+  textSplitted.forEach((word) => {
+    newText.push('<span class="text-word">' + word + '</span>');
+  });
+  mainText.innerHTML = newText.join(' ');
+  const spansWords = document.getElementsByClassName('text-word');
+
+  for (let i = 0; i < spansWords.length; i++) {
+    spansWords[i].style.opacity = 0;
+  }
+  mainText.style.opacity = 1;
+
+  let i = 0;
+  const wordsInterval = setInterval(() => {
+    spansWords[i].style.opacity = 1;
+
+    if (spansWords.length === i) {
+      console.log('clear');
+      clearInterval(wordsInterval);
+    }
+    i++;
+  }, 50);
 });
 
 window.addEventListener('mouseup', function (event) {
