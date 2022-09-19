@@ -114,6 +114,10 @@ footer > h6 > a:hover {
 }
 
 /* classes */
+h1 > span.color-red {
+  color: red;
+}
+
 .images-slider {
   width: calc(100% + 8em);
   max-width: calc(100% + 8em);
