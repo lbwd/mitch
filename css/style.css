@@ -9,6 +9,8 @@ html {
   font-weight: 300;
   font-size: 18px;
   cursor: url(../imgs/cursor.png), auto;
+  opacity: 0;
+  transition: opacity 0.15s linear;
 }
 
 body {

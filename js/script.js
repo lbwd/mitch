@@ -5,6 +5,9 @@
 
 const interval = [];
 window.addEventListener('load', (loadEv) => {
+  /* Main opacity */
+  document.documentElement.style.opacity = 1;
+
   /* Image slider */
   const imagesSlider = document.getElementsByClassName('images-slider')[0];
 
