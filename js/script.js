@@ -58,8 +58,7 @@ window.addEventListener('load', (loadEv) => {
   const wordsInterval = setInterval(() => {
     spansWords[i].style.opacity = 1;
 
-    if (spansWords.length === i) {
-      console.log('clear');
+    if (spansWords.length - 1 == i) {
       clearInterval(wordsInterval);
     }
     i++;
