@@ -41,7 +41,7 @@ window.addEventListener('load', (loadEv) => {
 
   /* Text effect */
   const mainText = document.getElementById('main-text');
-  const textSplitted = mainText.textContent.split(' ');
+  const textSplitted = mainText.textContent.replace(/ +(?= )/g, '').split(' ');
   const newText = [];
   textSplitted.forEach((word) => {
     newText.push('<span class="text-word">' + word + '</span>');
