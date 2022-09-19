@@ -38,6 +38,9 @@ window.addEventListener('load', (loadEv) => {
       const thanksText = document.getElementsByClassName('thanks-text')[0];
       thanksText.style.opacity = 0;
     });
+
+  /* Text effect */
+  const mainText = document.getElementById('main-text');
 });
 
 window.addEventListener('mouseup', function (event) {
