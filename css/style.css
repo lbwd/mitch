@@ -318,6 +318,10 @@ h1 > span.color-red {
     font-size: 1.5em;
   }
 
+  .slider-arrows {
+    margin-top: -17.5em;
+  }
+
   .images-slider {
     overflow-x: auto;
   }
@@ -391,11 +395,19 @@ h1 > span.color-red {
   html {
     font-size: 14px;
   }
+
+  .slider-arrows {
+    margin-top: -18.5em;
+  }
 }
 
 @media screen and (max-width: 685px) {
   html {
     font-size: 12px;
+  }
+
+  .slider-arrows {
+    margin-top: -20em;
   }
 }
 
@@ -403,10 +415,18 @@ h1 > span.color-red {
   html {
     font-size: 10px;
   }
+
+  .slider-arrows {
+    margin-top: -22.5em;
+  }
 }
 
 @media screen and (max-width: 500px) {
   html {
     font-size: 8px;
+  }
+
+  .slider-arrows {
+    margin-top: -25.5em;
   }
 }
