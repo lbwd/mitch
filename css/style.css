@@ -303,3 +303,76 @@ h1 > span.color-red {
     transform: translate(0, 0);
   }
 }
+
+/* Responsivness */
+@media screen and (max-width: 1660px) {
+}
+
+@media screen and (max-width: 1450px) {
+}
+
+@media screen and (max-width: 1150px) {
+}
+
+@media screen and (max-width: 950px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 825px) {
+}
+
+@media screen and (max-width: 685px) {
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 8px;
+  }
+
+  .images-slider,
+  .images-slider-int {
+    height: 250px;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .links-left-section,
+  .links-right-section {
+    align-items: center;
+  }
+
+  .links-right-section {
+    margin-top: 4em;
+    flex-direction: column-reverse;
+  }
+
+  .links-right-section > .square-logo {
+    width: 50px;
+    margin-bottom: 0;
+    margin-top: 4em;
+  }
+
+  .pre-footer {
+    margin-top: 0;
+  }
+
+  .arrow-logo {
+    display: none;
+  }
+
+  .thanks-text {
+    opacity: 1;
+    align-items: center;
+  }
+
+  .thanks-text {
+    text-align: center;
+  }
+}
