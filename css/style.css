@@ -436,3 +436,23 @@ h1 > span.color-red {
     margin-top: -25.5em;
   }
 }
+
+@media screen and (max-width: 325px) {
+  html {
+    font-size: 7px;
+  }
+
+  .slider-arrows {
+    margin-top: -28em;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 6px;
+  }
+
+  .slider-arrows {
+    margin-top: -31em;
+  }
+}
