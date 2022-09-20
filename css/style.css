@@ -363,6 +363,11 @@ h1 > span.color-red {
     display: none;
   }
 
+  .thanks {
+    margin-left: -4em;
+    width: calc(100% + 8em);
+  }
+
   .thanks-text {
     opacity: 1;
     align-items: center;
