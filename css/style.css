@@ -8,7 +8,7 @@ html {
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  cursor: url(../imgs/cursor.png), auto;
+  cursor: url(../imgs/cursor.png) 14 14, auto;
   opacity: 0;
   transition: opacity 0.15s linear;
 }
