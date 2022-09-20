@@ -279,6 +279,10 @@ h1 > span.color-red {
   font-weight: 400;
 }
 
+.thanks-text .no-wrap-text {
+  white-space: nowrap;
+}
+
 /* Animations */
 @keyframes phrase {
   0% {
