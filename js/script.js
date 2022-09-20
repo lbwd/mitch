@@ -28,19 +28,15 @@ window.addEventListener('load', (loadEv) => {
   });
 
   /* Thanks divs */
-  document
-    .getElementsByClassName('arrow-logo')[0]
-    .addEventListener('mouseover', (e) => {
-      const thanksText = document.getElementsByClassName('thanks-text')[0];
-      thanksText.style.opacity = 1;
-    });
+  document.getElementsByClassName('arrow-logo')[0].addEventListener('mouseover', (e) => {
+    const thanksText = document.getElementsByClassName('thanks-text')[0];
+    thanksText.style.opacity = 1;
+  });
 
-  document
-    .getElementsByClassName('arrow-logo')[0]
-    .addEventListener('mouseout', (e) => {
-      const thanksText = document.getElementsByClassName('thanks-text')[0];
-      thanksText.style.opacity = 0;
-    });
+  document.getElementsByClassName('arrow-logo')[0].addEventListener('mouseout', (e) => {
+    const thanksText = document.getElementsByClassName('thanks-text')[0];
+    thanksText.style.opacity = 0;
+  });
 
   /* Text effect */
   const mainText = document.getElementById('main-text');

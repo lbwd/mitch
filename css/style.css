@@ -124,6 +124,7 @@ h1 > span.color-red {
   height: 450px;
   margin: 8em 0 0 -4em;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .images-slider-int {
@@ -258,8 +259,7 @@ h1 > span.color-red {
 }
 
 .pre-footer > .thanks > .arrow-logo:hover {
-  filter: invert(73%) sepia(97%) saturate(2104%) hue-rotate(0deg)
-    brightness(107%) contrast(103%);
+  filter: invert(73%) sepia(97%) saturate(2104%) hue-rotate(0deg) brightness(107%) contrast(103%);
 }
 
 .thanks-text {
@@ -388,6 +388,12 @@ h1 > span.color-red {
   footer > h6 {
     font-weight: 400;
     font-size: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer > h6 > .space-to-remove {
+    display: none;
   }
 }
 
