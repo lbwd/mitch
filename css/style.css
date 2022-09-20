@@ -109,7 +109,7 @@ footer > h6 > a {
   transition: color 0.15s linear;
 }
 
-footer > h6 > a:hover {
+footer > h6 > span > a:hover {
   color: black;
 }
 
