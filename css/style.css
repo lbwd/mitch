@@ -32,6 +32,10 @@ a.a-button {
   transition: background-color 0.15s linear;
 }
 
+a.a-button:hover {
+  background-color: black;
+}
+
 h1 {
   font-size: 8em;
   font-weight: 900;
