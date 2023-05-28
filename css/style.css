@@ -298,6 +298,51 @@ h1 > span.color-red {
   white-space: nowrap;
 }
 
+#gallery-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2a2a2acc;
+  display: none;
+  place-content: center;
+  align-items: center;
+}
+
+#gallery-block.visible {
+  display: flex;
+}
+
+#gallery-block > img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+#gallery-block > div.icon-only {
+  position: absolute;
+  color: #ffc000;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#gallery-block > div.icon-only#close-gallery {
+  top: 20px;
+  right: 20px;
+}
+
+#gallery-block > div.icon-only#gallery-left {
+  left: 20px;
+}
+
+#gallery-block > div.icon-only#gallery-right {
+  right: 20px;
+}
+
 /* Animations */
 @keyframes phrase {
   0% {

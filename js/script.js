@@ -62,6 +62,37 @@ window.addEventListener('load', (loadEv) => {
     }
     i++;
   }, 50);
+
+  /* Gallery */
+  let elements = document.getElementsByClassName('slider-img');
+  Array.prototype.forEach.call(elements, (element) => {
+    element.addEventListener('click', () => {
+      switchGalleryState(getImgFromElement(element));
+    });
+  });
+
+  document.getElementById('close-gallery').addEventListener('click', () => {
+    switchGalleryState();
+  });
+
+  function switchGalleryState(imgNumber) {
+    let gallery = document.getElementById('gallery-block');
+    let img = document.getElementById('gallery-img');
+    if (gallery.classList.contains('visible')) {
+      gallery.classList.remove('visible');
+      document.body.style.overflow = 'auto';
+    } else {
+      img.src = 'imgs/' + imgNumber + '.webp';
+      gallery.classList.add('visible');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function getImgFromElement(element) {
+    let split = element.src.split('/');
+    let file = split[split.length - 1];
+    return file.split('.')[0];
+  }
 });
 
 window.addEventListener('mouseup', function (event) {
