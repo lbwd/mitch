@@ -324,23 +324,24 @@ h1 > span.color-red {
   color: #ffc000;
   font-size: 2em;
   cursor: pointer;
-  font-family: sans-serif;
   font-weight: bold;
   -webkit-user-select: none;
   user-select: none;
 }
 
 #gallery-block > div.icon-only#close-gallery {
-  top: 20px;
-  right: 20px;
+  top: 0.5em;
+  right: 0.5em;
 }
 
 #gallery-block > div.icon-only#gallery-left {
-  left: 20px;
+  font-size: 3em;
+  left: 0.5em;
 }
 
 #gallery-block > div.icon-only#gallery-right {
-  right: 20px;
+  font-size: 3em;
+  right: 0.5em;
 }
 
 /* Animations */

@@ -71,7 +71,15 @@ window.addEventListener('load', (loadEv) => {
     });
   });
 
-  document.getElementById('close-gallery').addEventListener('click', () => {
+  document.getElementById('close-gallery').addEventListener('click', (e) => {
+    switchGalleryState();
+  });
+
+  document.getElementById('gallery-block').addEventListener('click', (e) => {
+    if (e.target !== document.getElementById('gallery-block')) {
+      return;
+    }
+
     switchGalleryState();
   });
 
