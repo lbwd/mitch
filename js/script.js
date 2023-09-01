@@ -97,7 +97,7 @@ window.addEventListener('load', (loadEv) => {
   function switchGalleryState(imgNumber) {
     let gallery = document.getElementById('gallery-block');
     let img = document.getElementById('gallery-img');
-    if (gallery.classList.contains('visible')) {
+    if (!imgNumber) {
       gallery.classList.remove('visible');
       document.body.style.overflow = 'auto';
       selectedImg = null;
