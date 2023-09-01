@@ -117,13 +117,13 @@ window.addEventListener('load', (loadEv) => {
 
   function showPrevImage() {
     if (selectedImg && selectedImg > 1) {
-      switchGalleryState(selectedImg--);
+      switchGalleryState(--selectedImg);
     }
   }
 
   function showNextImage() {
     if (selectedImg && selectedImg < totalImgs) {
-      switchGalleryState(selectedImg++);
+      switchGalleryState(++selectedImg);
     }
   }
 });
