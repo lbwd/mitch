@@ -4,6 +4,8 @@
 */
 
 const interval = [];
+let totalImgs;
+let selectedImg = null;
 window.addEventListener('load', (loadEv) => {
   /* Main opacity */
   document.documentElement.style.opacity = 1;
@@ -65,6 +67,7 @@ window.addEventListener('load', (loadEv) => {
 
   /* Gallery */
   let elements = document.getElementsByClassName('slider-img');
+  totalImgs = elements.length;
   Array.prototype.forEach.call(elements, (element) => {
     element.addEventListener('click', () => {
       switchGalleryState(getImgFromElement(element));
@@ -83,16 +86,26 @@ window.addEventListener('load', (loadEv) => {
     switchGalleryState();
   });
 
+  document.getElementById('gallery-left').addEventListener('click', (e) => {
+    showPrevImage();
+  });
+
+  document.getElementById('gallery-right').addEventListener('click', (e) => {
+    showNextImage();
+  });
+
   function switchGalleryState(imgNumber) {
     let gallery = document.getElementById('gallery-block');
     let img = document.getElementById('gallery-img');
     if (gallery.classList.contains('visible')) {
       gallery.classList.remove('visible');
       document.body.style.overflow = 'auto';
+      selectedImg = null;
     } else {
       img.src = 'imgs/' + imgNumber + '.webp';
       gallery.classList.add('visible');
       document.body.style.overflow = 'hidden';
+      selectedImg = imgNumber;
     }
   }
 
@@ -100,6 +113,18 @@ window.addEventListener('load', (loadEv) => {
     let split = element.src.split('/');
     let file = split[split.length - 1];
     return file.split('.')[0];
+  }
+
+  function showPrevImage() {
+    if (selectedImg && selectedImg > 1) {
+      switchGalleryState(selectedImg--);
+    }
+  }
+
+  function showNextImage() {
+    if (selectedImg && selectedImg < totalImgs) {
+      switchGalleryState(selectedImg++);
+    }
   }
 });
 
