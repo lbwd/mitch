@@ -41,29 +41,33 @@ window.addEventListener('load', (loadEv) => {
   });
 
   /* Text effect */
-  const mainText = document.getElementById('main-text');
-  const textSplitted = mainText.textContent.replace(/ +(?= )/g, '').split(' ');
-  const newText = [];
-  textSplitted.forEach((word) => {
-    newText.push('<span class="text-word">' + word + '</span>');
-  });
-  mainText.innerHTML = newText.join(' ');
-  const spansWords = document.getElementsByClassName('text-word');
+  textEffect('main-text');
 
-  for (let i = 0; i < spansWords.length; i++) {
-    spansWords[i].style.opacity = 0;
-  }
-  mainText.style.opacity = 1;
+  function textEffect(paragraph) {
+    const mainText = document.getElementById(paragraph);
+    const textSplitted = mainText.textContent.replace(/ +(?= )/g, '').split(' ');
+    const newText = [];
+    textSplitted.forEach((word) => {
+      newText.push('<span class="text-word">' + word + '</span>');
+    });
+    mainText.innerHTML = newText.join(' ');
+    const spansWords = document.getElementsByClassName('text-word');
 
-  let i = 0;
-  const wordsInterval = setInterval(() => {
-    spansWords[i].style.opacity = 1;
-
-    if (spansWords.length - 1 == i) {
-      clearInterval(wordsInterval);
+    for (let i = 0; i < spansWords.length; i++) {
+      spansWords[i].style.opacity = 0;
     }
-    i++;
-  }, 50);
+    mainText.style.opacity = 1;
+
+    let i = 0;
+    const wordsInterval = setInterval(() => {
+      spansWords[i].style.opacity = 1;
+
+      if (spansWords.length - 1 == i) {
+        clearInterval(wordsInterval);
+      }
+      i++;
+    }, 50);
+  }
 
   /* Gallery */
   let elements = document.getElementsByClassName('slider-img');
@@ -97,15 +101,24 @@ window.addEventListener('load', (loadEv) => {
   function switchGalleryState(imgNumber) {
     let gallery = document.getElementById('gallery-block');
     let img = document.getElementById('gallery-img');
+    let left = document.getElementById('gallery-left');
+    let right = document.getElementById('gallery-right');
     if (!imgNumber) {
       gallery.classList.remove('visible');
       document.body.style.overflow = 'auto';
       selectedImg = null;
     } else {
-      img.src = 'imgs/' + imgNumber + '.webp';
+      img.src = 'imgs-new/' + imgNumber + '.webp';
       gallery.classList.add('visible');
       document.body.style.overflow = 'hidden';
       selectedImg = imgNumber;
+      left.style.color = '#ffc000';
+      right.style.color = '#ffc000';
+      if (selectedImg == 1) {
+        left.style.color = '#ccc';
+      } else if (selectedImg == totalImgs) {
+        right.style.color = '#ccc';
+      }
     }
   }
 
@@ -126,6 +139,27 @@ window.addEventListener('load', (loadEv) => {
       switchGalleryState(++selectedImg);
     }
   }
+
+  /* Gallery swipe */
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  function checkDirection() {
+    if (touchendX < touchstartX) {
+      showNextImage();
+    } else if (touchendX > touchstartX) {
+      showPrevImage();
+    }
+  }
+
+  document.getElementById('gallery-img').addEventListener('touchstart', (e) => {
+    touchstartX = e.changedTouches[0].screenX;
+  });
+
+  document.getElementById('gallery-img').addEventListener('touchend', (e) => {
+    touchendX = e.changedTouches[0].screenX;
+    checkDirection();
+  });
 });
 
 window.addEventListener('mouseup', function (event) {

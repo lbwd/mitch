@@ -161,7 +161,7 @@ h1 > span.color-red {
 
 .image-slider-arrow {
   position: absolute;
-  top: 2.5em;
+  top: 3em;
   font-size: 3em;
   font-weight: bold;
   color: #ffc000;
@@ -330,17 +330,17 @@ h1 > span.color-red {
 }
 
 #gallery-block > div.icon-only#close-gallery {
-  top: 0.5em;
-  right: 0.5em;
+  top: 1.5em;
+  right: 1.5em;
 }
 
 #gallery-block > div.icon-only#gallery-left {
-  font-size: 3em;
+  font-size: 5em;
   left: 0.5em;
 }
 
 #gallery-block > div.icon-only#gallery-right {
-  font-size: 3em;
+  font-size: 5em;
   right: 0.5em;
 }
 
@@ -370,6 +370,16 @@ h1 > span.color-red {
 }
 
 /* Responsivness */
+@media (hover: none) {
+  .images-slider {
+    overflow-x: auto;
+  }
+
+  .slider-arrows {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   html {
     font-size: 16px;
@@ -384,11 +394,7 @@ h1 > span.color-red {
   }
 
   .slider-arrows {
-    margin-top: -17.5em;
-  }
-
-  .images-slider {
-    overflow-x: auto;
+    margin-top: -18.5em;
   }
 
   .images-slider,
@@ -473,7 +479,20 @@ h1 > span.color-red {
   }
 
   .slider-arrows {
-    margin-top: -18.5em;
+    margin-top: -19.5em;
+  }
+
+  #gallery-block > div.icon-only#gallery-left {
+    font-size: 3em;
+  }
+
+  #gallery-block > div.icon-only#gallery-right {
+    font-size: 3em;
+  }
+
+  #gallery-block > div.icon-only#close-gallery {
+    top: 0.5em;
+    right: 0.5em;
   }
 }
 
@@ -483,7 +502,7 @@ h1 > span.color-red {
   }
 
   .slider-arrows {
-    margin-top: -20em;
+    margin-top: -21em;
   }
 }
 
@@ -493,7 +512,7 @@ h1 > span.color-red {
   }
 
   .slider-arrows {
-    margin-top: -22.5em;
+    margin-top: -23.5em;
   }
 }
 
@@ -503,7 +522,7 @@ h1 > span.color-red {
   }
 
   .slider-arrows {
-    margin-top: -25.5em;
+    margin-top: -26.5em;
   }
 }
 
