@@ -211,10 +211,15 @@ h1 > span.color-red {
   text-shadow: none;
 }
 
+.text-effect-inhuman {
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
 #body-text {
   opacity: 1;
   font-size: 1em;
-  font-weight: normal;
+  font-weight: 300;
   margin: 8em 16% 10em 16%;
 }
 
@@ -425,10 +430,20 @@ h1 > span.color-red {
     margin-left: 14%;
     margin-right: 14%;
   }
+
+  .text-effect-inhuman {
+    margin-left: 14%;
+    margin-right: 14%;
+  }
 }
 
 @media screen and (max-width: 1500px) {
   #body-text {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .text-effect-inhuman {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -439,10 +454,20 @@ h1 > span.color-red {
     margin-left: 6%;
     margin-right: 6%;
   }
+
+  .text-effect-inhuman {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
 }
 
 @media screen and (max-width: 1250px) {
   #body-text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .text-effect-inhuman {
     margin-left: 0;
     margin-right: 0;
   }
