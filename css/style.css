@@ -211,16 +211,39 @@ h1 > span.color-red {
   text-shadow: none;
 }
 
+.text-effect-inhuman {
+  text-align: center;
+}
+
 #body-text {
   opacity: 1;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: normal;
-  margin-top: 4em;
-  margin-bottom: 6em;
+  margin: 8em 16% 10em 16%;
 }
 
 #body-text .body-bold {
   font-weight: bold;
+}
+
+#body-text .body-italic {
+  font-style: italic;
+}
+
+#body-text p.p-spacer {
+  height: 2em;
+}
+
+#body-text .body-flex {
+  display: flex;
+  align-items: center;
+}
+
+#body-text .body-portrait {
+  height: 700px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-right: 2em;
 }
 
 .central-button {
@@ -401,6 +424,34 @@ h1 > span.color-red {
   }
 }
 
+@media screen and (max-width: 1650px) {
+  #body-text {
+    margin-left: 14%;
+    margin-right: 14%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #body-text {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  #body-text {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  #body-text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 1150px) {
   html {
     font-size: 16px;
@@ -412,6 +463,20 @@ h1 > span.color-red {
 
   small {
     font-size: 1.5em;
+  }
+
+  #body-text {
+    font-size: 1.5em;
+  }
+
+  #body-text .body-flex {
+    flex-direction: column;
+  }
+
+  #body-text .body-portrait {
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .slider-arrows {
