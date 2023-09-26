@@ -9,6 +9,7 @@ window.addEventListener('load', (loadEv) => {
   document.documentElement.style.opacity = 1;
 
   /* Text effect */
+  textEffect('title-text');
   textEffect('main-text');
 
   function textEffect(paragraph) {

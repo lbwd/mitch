@@ -85,6 +85,10 @@ article {
   opacity: 0;
 }
 
+article.text-inhuman {
+  font-size: 4em;
+}
+
 article > span {
   transition: opacity 0.15s linear;
 }
@@ -188,6 +192,11 @@ h1 > span.color-red {
   flex-direction: row;
 }
 
+.phrase-slider.phrase-inhuman {
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
 .phrase-slider > span {
   font-size: 5em;
   font-weight: 900;
@@ -200,6 +209,18 @@ h1 > span.color-red {
 .phrase-slider > span > span.black {
   color: black;
   text-shadow: none;
+}
+
+#body-text {
+  opacity: 1;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-top: 4em;
+  margin-bottom: 6em;
+}
+
+#body-text .body-bold {
+  font-weight: bold;
 }
 
 .central-button {
