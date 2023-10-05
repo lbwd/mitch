@@ -136,6 +136,10 @@ ul {
   margin-top: -1em;
 }
 
+li {
+  padding: 8px 0;
+}
+
 /* classes */
 h1 > span.color-red {
   color: red;
