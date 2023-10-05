@@ -504,7 +504,7 @@ h1 > span.color-red {
   }
 
   #body-text,
-  .navigation-links {
+  body > .navigation-links {
     font-size: 1.5em;
   }
 
