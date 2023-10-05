@@ -131,6 +131,11 @@ footer > h6 > span > a:hover {
   color: black;
 }
 
+ul {
+  list-style-type: '-   ';
+  margin-top: -1em;
+}
+
 /* classes */
 h1 > span.color-red {
   color: red;
@@ -182,6 +187,12 @@ h1 > span.color-red {
   right: 0.5em;
 }
 
+.navigation-links {
+  display: flex;
+  place-content: space-between;
+  margin-bottom: -4em;
+}
+
 .phrase-slider {
   width: calc(100% + 8em);
   max-width: calc(100% + 8em);
@@ -223,12 +234,18 @@ h1 > span.color-red {
   margin: 8em 16% 10em 16%;
 }
 
-#body-text .body-bold {
+#body-text .body-bold,
+.navigation-links .body-bold {
   font-weight: bold;
 }
 
 #body-text .body-italic {
   font-style: italic;
+}
+
+#body-text .body-link:hover,
+.navigation-links .body-link:hover {
+  color: #ffc000;
 }
 
 #body-text p.p-spacer {
@@ -486,7 +503,8 @@ h1 > span.color-red {
     font-size: 1.5em;
   }
 
-  #body-text {
+  #body-text,
+  .navigation-links {
     font-size: 1.5em;
   }
 
