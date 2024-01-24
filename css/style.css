@@ -91,7 +91,7 @@ article.text-inhuman {
 
 section.inhuman-banner {
   margin-top: 4em;
-  margin-bottom: -6em;
+  margin-bottom: -4em;
 }
 
 section.inhuman-banner > img {
@@ -608,6 +608,10 @@ h1 > span.color-red {
 
   footer > h6 > .space-to-remove {
     display: none;
+  }
+
+  section.inhuman-banner {
+    margin-bottom: -6em;
   }
 }
 
