@@ -89,6 +89,15 @@ article.text-inhuman {
   font-size: 4em;
 }
 
+section.inhuman-banner {
+  margin-top: 4em;
+  margin-bottom: -6em;
+}
+
+section.inhuman-banner > img {
+  max-width: 100%;
+}
+
 article > span {
   transition: opacity 0.15s linear;
 }
